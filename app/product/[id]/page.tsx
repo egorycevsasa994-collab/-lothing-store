@@ -44,7 +44,7 @@ export default function ProductPage() {
 
     const message = 'Привет, хочу сделать заказ. ${product.name}, размер ${size}';
 
-    const telegram = `https://t.me/nnsan00?text=${encodeURIComponent(
+    const telegram = `https://t.me/nnsan00pw?text=${encodeURIComponent(
       message
     )}`;
 

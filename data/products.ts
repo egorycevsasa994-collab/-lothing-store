@@ -3,8 +3,7 @@ export const products = [
     id: 1,
     name: "Худи CONTROLL",
     price: "2200 ₽",
-    description: "100% хлопок",
-    description: "100% мсд",
+    description: "100% хлопок", 
     images: [
       "/products/1/2.jpg",
       "/products/1/1.jpg",
