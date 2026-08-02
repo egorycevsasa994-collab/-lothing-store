@@ -3,7 +3,6 @@
 import Image from "next/image";
 import Menu from "@/components/Menu";
 import ProductCard from "@/components/ProductCard";
-import RotatingLogo from "@/components/RotatingLogo";
 import { products } from "@/data/products";
 
 export default function Home() {
