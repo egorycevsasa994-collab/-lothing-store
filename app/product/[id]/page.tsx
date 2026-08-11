@@ -12,31 +12,29 @@ export default function ProductPage() {
 
   const product = products.find((item) => item.id === id);
 
-  const [size, setSize] = useState("");
-  const [activeImage, setActiveImage] = useState(0);
-  const [fullscreen, setFullscreen] = useState(false);
+const [size, setSize] = useState("");
+const [activeImage, setActiveImage] = useState(0);
+const [fullscreen, setFullscreen] = useState(false);
 
-  if (!product) {
-    return (
-      <main className="min-h-screen flex items-center justify-center bg-[#0f0f0f] text-white">
-        Товар не найден
-      </main>
-    );
-  }
+if (!product) {
+  return (
+    <main className="min-h-screen flex items-center justify-center bg-[#0f0f0f] text-white">
+      Товар не найден
+    </main>
+  );
+}
+
+const currentProduct = product;
 
   function nextImage() {
-  if (!product) return;
-
   setActiveImage((prev) =>
-    prev === product.images.length - 1 ? 0 : prev + 1
+    prev === currentProduct.images.length - 1 ? 0 : prev + 1
   );
 }
 
 function prevImage() {
-  if (!product) return;
-
   setActiveImage((prev) =>
-    prev === 0 ? product.images.length - 1 : prev - 1
+    prev === 0 ? currentProduct.images.length - 1 : prev - 1
   );
 }
 
@@ -46,7 +44,7 @@ function prevImage() {
     return;
   }
 
-  const message = `Привет! Хочу купить ${product.name}, размер ${size}.`;
+  const message = `Привет! Хочу купить ${currentProduct.name}, размер ${size}.`;
 
   const telegram = `https://t.me/nnsan00?text=${encodeURIComponent(message)}`;
 
