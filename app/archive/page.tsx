@@ -9,7 +9,6 @@ export default function Archive() {
 
 
   const photos = [
-    "/archive/1.jpg",
     "/archive/2.jpg",
     "/archive/3.jpg",
     "/archive/4.jpg",

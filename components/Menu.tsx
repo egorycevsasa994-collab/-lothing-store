@@ -8,6 +8,7 @@ export default function Menu() {
 
   return (
     <>
+      {/* Кнопка меню */}
       <button
         type="button"
         onClick={() => setOpen(true)}
@@ -29,6 +30,7 @@ export default function Menu() {
         ☰
       </button>
 
+      {/* Затемнение */}
       {open && (
         <div
           onClick={() => setOpen(false)}
@@ -36,6 +38,7 @@ export default function Menu() {
         />
       )}
 
+      {/* Боковое меню */}
       <aside
         className={`
           fixed
@@ -44,30 +47,58 @@ export default function Menu() {
           h-screen
           w-72
           bg-[#181818]
+          text-white
           z-[120]
           transition-transform
           duration-300
           ${open ? "translate-x-0" : "translate-x-full"}
         `}
       >
+        {/* Кнопка закрытия */}
         <button
           type="button"
           onClick={() => setOpen(false)}
-          className="absolute right-6 top-5 text-3xl text-white"
+          className="
+            absolute
+            right-6
+            top-5
+            text-3xl
+            text-white
+          "
         >
           ✕
         </button>
 
-        <nav className="flex flex-col gap-8 mt-24 px-10 text-2xl">
-          <Link href="/" onClick={() => setOpen(false)}>
+        {/* Ссылки */}
+        <nav
+          className="
+            flex
+            flex-col
+            gap-8
+            mt-24
+            px-10
+            text-2xl
+            text-white
+          "
+        >
+          <Link
+            href="/"
+            onClick={() => setOpen(false)}
+          >
             Главная
           </Link>
 
-          <Link href="/archive" onClick={() => setOpen(false)}>
+          <Link
+            href="/archive"
+            onClick={() => setOpen(false)}
+          >
             Архив
           </Link>
 
-          <Link href="/contacts" onClick={() => setOpen(false)}>
+          <Link
+            href="/contacts"
+            onClick={() => setOpen(false)}
+          >
             Контакты
           </Link>
         </nav>
