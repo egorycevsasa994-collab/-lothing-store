@@ -25,16 +25,20 @@ export default function ProductPage() {
   }
 
   function nextImage() {
-    setActiveImage((prev) =>
-      prev === product.images.length - 1 ? 0 : prev + 1
-    );
-  }
+  if (!product) return;
 
-  function prevImage() {
-    setActiveImage((prev) =>
-      prev === 0 ? product.images.length - 1 : prev - 1
-    );
-  }
+  setActiveImage((prev) =>
+    prev === product.images.length - 1 ? 0 : prev + 1
+  );
+}
+
+function prevImage() {
+  if (!product) return;
+
+  setActiveImage((prev) =>
+    prev === 0 ? product.images.length - 1 : prev - 1
+  );
+}
 
   function buyProduct() {
   if (!size) {
