@@ -46,7 +46,7 @@ function prevImage() {
 
   const message = `Привет! Хочу купить ${currentProduct.name}, размер ${size}.`;
 
-  const telegram = `https://t.me/nnsan00?text=${encodeURIComponent(message)}`;
+  const telegram = `https://t.me/nnsan00?text=${encodeURIComponent(message)};`
 
   window.location.href = telegram;
 }
@@ -294,7 +294,30 @@ absolute
             Купить
           </button>
 
-        </div>
+        {/* Купить в VK */}
+  <a
+    href="https://vk.ru/id1046183500"
+    target="_blank"
+    rel="noopener noreferrer"
+    className="
+      block
+      w-full
+      bg-white
+      text-black
+      rounded-2xl
+      py-4
+      text-lg
+      font-semibold
+      text-center
+      hover:bg-gray-200
+      transition
+      mt-3
+    "
+  >
+    Купить в VK
+  </a>
+
+</div>
 
       </section>
 
